@@ -35,7 +35,7 @@ public class Principal {
         }else if(opcion==2){
             rectangulo.digite();
         }else if(opcion==3){
-            triangulo.digite();
+            triangulo.subMenu();
         }else{
             System.out.println("Opcion Incorrecta");
         }  
