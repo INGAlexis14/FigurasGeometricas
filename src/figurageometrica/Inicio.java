@@ -9,7 +9,7 @@ package figurageometrica;
  *
  * @author Alexis González
  */
-public class FiguraGeometrica {
+public class Inicio {
 
     /**
      * @param args the command line arguments
