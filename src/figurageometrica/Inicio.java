@@ -4,7 +4,6 @@
  * and open the template in the editor.
  */
 package figurageometrica;
-
 /**
  *
  * @author Alexis González
@@ -14,9 +13,10 @@ public class Inicio {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
-       Principal principal = new Principal();
-       principal.Inicio();
+    public static void main(String[] args) {   
+       Principal p = new Principal();
+       p.Inicio();
+            
     }
     
 }

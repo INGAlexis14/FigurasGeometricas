@@ -89,8 +89,7 @@ public class ViewFiguras extends javax.swing.JPanel {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
-       
-       Cuadrado cuadrado = new Cuadrado(); 
+        Cuadrado cuadrado = new Cuadrado();
         Grafica.pintarCuadro(jPanel1.getGraphics() , 0, 0,cuadrado.getLado1() , cuadrado.getLado2());
     }//GEN-LAST:event_jButton1MouseClicked
 

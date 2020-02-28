@@ -5,6 +5,7 @@
  */
 package figurageometrica;
 
+import java.awt.Graphics;
 import java.util.Scanner;
 
 /**
@@ -14,8 +15,8 @@ import java.util.Scanner;
 public class Cuadrado extends Figura {
     
     Scanner sc = new Scanner(System.in);
-    private int lado1;
-    private int lado2;
+    public int lado1;
+    public int lado2;
 
     public Cuadrado(int lado1, int lado2) {
         this.lado1 = lado1;
@@ -55,17 +56,17 @@ public class Cuadrado extends Figura {
         System.out.println("Digite Lado 1");
         lado1 = sc.nextInt();
         System.out.println("Digite Lado 2");
-        lado2 = sc.nextInt();       
+        lado2 = sc.nextInt();  
         area = lado1*lado2;
         perimetro = lado1*4;
-        imprimirFigura();
-        
+        System.out.println("Area es igual a : " + area);
+        System.out.println("Perimetro es igual a :" + perimetro);
+        CuadroVista cb = new CuadroVista(lado1, lado2);
+        cb.setVisible(true);
+
     }
+    
        
-    public void imprimirFigura() {    
-        
-        
-    }
     
     
 }

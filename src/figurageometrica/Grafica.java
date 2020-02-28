@@ -14,9 +14,22 @@ import java.awt.Graphics;
 public class Grafica {
     
     public static void pintarCuadro (Graphics g, int x, int y,int x1,int y1){
-        Cuadrado cuadrado = new Cuadrado();
-        
+   
         g.drawRect(x, y, y1, y1);
     }
+    
+    public static void pintarRectangulo (Graphics g, int x, int y,int x1,int y1){
+          
+        g.drawRect(x, y, y1, y1);
+    }
+    
+     public static void pintarTriangulo (Graphics g, int x, int y,int x1,int y1){
+          
+        g.drawRoundRect(x, y, y1, y1, y1, y1);
+    }
+    
+    
+    
+   
    
 }
