@@ -18,26 +18,47 @@ public class Cuadrado extends Figura {
     public int lado1;
     public int lado2;
 
+    /**
+     * 
+     * @param lado1 Variable lado 1
+     * @param lado2 Variable lado 2
+     */
     public Cuadrado(int lado1, int lado2) {
         this.lado1 = lado1;
         this.lado2 = lado2;
     }
 
+    /**
+     * Contructor de la clase cuadro
+     */
     public Cuadrado() {
     }
 
+    /**
+     * Get de Sacaner
+     * @return 
+     */
     public Scanner getSc() {
         return sc;
     }
-
+    /**
+     * Set scanner
+     * @param sc 
+     */
     public void setSc(Scanner sc) {
         this.sc = sc;
     }
-
+    /**
+     * get lado 1
+     * @return 
+     */
     public int getLado1() {
         return lado1;
     }
-
+    /**
+     * set lado 1
+     * @param lado1 
+     */
     public void setLado1(int lado1) {
         this.lado1 = lado1;
     }
@@ -51,7 +72,9 @@ public class Cuadrado extends Figura {
     }
 
     
-    
+    /**
+     * Metodo donde se escribe los dos lados de cuadro
+     */
     public void digite(){
         System.out.println("Digite Lado 1");
         lado1 = sc.nextInt();

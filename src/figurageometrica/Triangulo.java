@@ -18,7 +18,9 @@ public class Triangulo extends Figura {
     public double lado6;
     public double lado7;
     private int tipo;
-    
+    /**
+     * Metodo donde se digitan los 3 lados del triangulo
+     */
     public void subMenu(){     
         System.out.println("Digite Lado 1");
         lado5 = sc.nextInt();
@@ -38,7 +40,9 @@ public class Triangulo extends Figura {
             System.out.println("El triangulo no existe");
         }
     }
-    
+    /**
+     * Metodo donde se calcula el area y perimetro
+     */
     public void digite(){
         double semiperimetro;
         if((lado5==lado6) && (lado6==lado7)){
@@ -56,7 +60,9 @@ public class Triangulo extends Figura {
         imprimirTipoFigura();
         
     }
-    
+    /**
+     * Metodo donde se imprime el tipo de triangulo
+     */
     public void imprimirTipoFigura() {    
         if(tipo==1){
             System.out.println("Equilatero");

@@ -16,7 +16,9 @@ public class Rectangulo extends Figura{
     Scanner sc = new Scanner(System.in);
     public int lado3;
     public int lado4;
-
+    /**
+     * Metodo donde se digita la base y la altura del rectangulo
+     */
     public void digite(){
         System.out.println("Digite Base");
         lado3 = sc.nextInt();

@@ -11,6 +11,7 @@ import java.util.Scanner;
  *
  * @author Alexis González
  */
+
 public class Principal {
     
     Scanner sc = new Scanner(System.in);
@@ -18,6 +19,10 @@ public class Principal {
     Cuadrado cuadrado = new Cuadrado();
     Rectangulo rectangulo = new Rectangulo();
     Triangulo triangulo = new Triangulo();
+    
+    /**
+     * Metodo donde inicia la aplicacion
+     */
     public void Inicio(){
           
         System.out.println("ELIJA EL TIPO DE FIGURA");
