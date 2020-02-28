@@ -5,18 +5,18 @@
  */
 package figurageometrica;
 
+import java.awt.Graphics;
+
 /**
  *
  * @author Alexis González
  */
-public class Inicio {
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-       Principal principal = new Principal();
-       principal.Inicio();
-    }
+public class Grafica {
     
+    public static void pintarCuadro (Graphics g, int x, int y,int x1,int y1){
+        Cuadrado cuadrado = new Cuadrado();
+        
+        g.drawRect(x, y, y1, y1);
+    }
+   
 }
