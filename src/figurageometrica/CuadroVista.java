@@ -5,21 +5,34 @@
  */
 package figurageometrica;
 
+import java.awt.image.ImageObserver;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
 /**
  *
  * @author Alexis González
  */
-public class CuadroVista extends javax.swing.JFrame {
+public class CuadroVista extends javax.swing.JFrame  {
 
     /**
      * Creates new form CuadroVista
      */
     public CuadroVista(int lado1, int lado2) {
+        
         initComponents();
         jTextField1.setText(Integer.toString(lado1));
         jTextField2.setText(Integer.toString(lado2));
         jTextField1.setVisible(false);
         jTextField2.setVisible(false);
+        if (lado1>lado2 || lado1<lado2){
+            System.out.println("No es un cuadrado");
+           jButton1.setEnabled(false);
+           jLabel1.setText("NO ES UN CUADRADO");
+          
+            
+        }
+         
     }
 
     private CuadroVista() {
@@ -38,6 +51,7 @@ public class CuadroVista extends javax.swing.JFrame {
         jTextField1 = new javax.swing.JTextField();
         jTextField2 = new javax.swing.JTextField();
         jPanel1 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -46,11 +60,17 @@ public class CuadroVista extends javax.swing.JFrame {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 249, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(56, 56, 56)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(57, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 221, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(146, Short.MAX_VALUE)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(52, 52, 52))
         );
 
         jButton1.setText("Pintar");
@@ -98,7 +118,11 @@ public class CuadroVista extends javax.swing.JFrame {
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
         int lado1 = Integer.parseInt(jTextField1.getText());
         int lado2 = Integer.parseInt(jTextField2.getText());
-        Grafica.pintarCuadro(jPanel1.getGraphics() , 100, 100,lado1,lado2 );
+       
+       
+        Grafica.pintarCuadro(jPanel1.getGraphics() ,100,100,lado1,lado2 );
+        
+        
     }//GEN-LAST:event_jButton1MouseClicked
 
     /**
@@ -139,8 +163,12 @@ public class CuadroVista extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
     // End of variables declaration//GEN-END:variables
+
+    
+ 
 }

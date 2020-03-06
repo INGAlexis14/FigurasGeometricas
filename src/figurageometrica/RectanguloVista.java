@@ -20,6 +20,13 @@ public class RectanguloVista extends javax.swing.JFrame {
         jTextField2.setText(Integer.toString(lado2));
         jTextField1.setVisible(false);
         jTextField2.setVisible(false);
+        if (lado1==lado2){
+            System.out.println("No es un Rectangulo");
+           jButton1.setEnabled(false);
+           jLabel1.setText("NO ES UN Rectangulo");
+          
+            
+        }
     }
 
     private RectanguloVista() {
@@ -39,6 +46,7 @@ public class RectanguloVista extends javax.swing.JFrame {
         jTextField1 = new javax.swing.JTextField();
         jTextField2 = new javax.swing.JTextField();
         jPanel1 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -49,15 +57,23 @@ public class RectanguloVista extends javax.swing.JFrame {
             }
         });
 
+        jLabel1.setText("jLabel1");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 275, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(89, 89, 89)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(50, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 251, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(193, Short.MAX_VALUE)
+                .addComponent(jLabel1)
+                .addGap(44, 44, 44))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -102,7 +118,8 @@ public class RectanguloVista extends javax.swing.JFrame {
         // TODO add your handling code here:
         int lado1 = Integer.parseInt(jTextField1.getText());
         int lado2 = Integer.parseInt(jTextField2.getText());
-        Grafica.pintarRectangulo(jPanel1.getGraphics() , 100, 100,lado1,lado2 );
+        Grafica.pintarRectangulo(jPanel1.getGraphics(),100,100,lado1,lado2);
+        
     }//GEN-LAST:event_jButton1MouseClicked
 
     /**
@@ -142,6 +159,7 @@ public class RectanguloVista extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;

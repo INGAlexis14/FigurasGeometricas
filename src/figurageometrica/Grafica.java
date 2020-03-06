@@ -5,6 +5,7 @@
  */
 package figurageometrica;
 
+import java.awt.Color;
 import java.awt.Graphics;
 
 /**
@@ -22,7 +23,11 @@ public class Grafica {
      */
     public static void pintarCuadro (Graphics g, int x, int y,int x1,int y1){
    
+        
+        g.setColor(Color.BLUE);
         g.drawRect(x, y, y1, y1);
+        
+
     }
     /**
      * Metodo estatico donde se pinta el rectangulo
@@ -34,7 +39,7 @@ public class Grafica {
      */
     public static void pintarRectangulo (Graphics g, int x, int y,int x1,int y1){
           
-        g.drawRect(x, y, y1, y1);
+        g.drawRect(x, y, x1, y1);
     }
     /**
      * Metodo estatico donde se pinta el triangulo

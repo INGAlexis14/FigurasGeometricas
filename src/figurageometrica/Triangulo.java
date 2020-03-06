@@ -11,8 +11,8 @@ import java.util.Scanner;
  *
  * @author Alexis González
  */
-public class Triangulo extends Figura {
-    
+public class Triangulo  {
+    /*
     Scanner sc = new Scanner(System.in);
     public double lado5;
     public double lado6;
@@ -21,6 +21,7 @@ public class Triangulo extends Figura {
     /**
      * Metodo donde se digitan los 3 lados del triangulo
      */
+    /*
     public void subMenu(){     
         System.out.println("Digite Lado 1");
         lado5 = sc.nextInt();
@@ -33,6 +34,7 @@ public class Triangulo extends Figura {
     /**
      * metodo determina que determina que tipo de triangulo es y si existe
      */
+    /*
     public void determina(){
         if((lado5+lado6>lado7)&&(lado5+lado7>lado6)&&(lado6+lado7>lado5)){
             digite();
@@ -43,6 +45,7 @@ public class Triangulo extends Figura {
     /**
      * Metodo donde se calcula el area y perimetro
      */
+    /*
     public void digite(){
         double semiperimetro;
         if((lado5==lado6) && (lado6==lado7)){
@@ -63,6 +66,7 @@ public class Triangulo extends Figura {
     /**
      * Metodo donde se imprime el tipo de triangulo
      */
+    /*
     public void imprimirTipoFigura() {    
         if(tipo==1){
             System.out.println("Equilatero");
@@ -77,4 +81,5 @@ public class Triangulo extends Figura {
     }
     
     
+    */
 }

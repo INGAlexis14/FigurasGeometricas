@@ -13,68 +13,48 @@ import java.util.Scanner;
  * @author Alexis González
  */
 public class Cuadrado extends Figura {
+
+    public Cuadrado(int lado1) {
+        super(lado1);
+    }
     
-    Scanner sc = new Scanner(System.in);
-    public int lado1;
-    public int lado2;
-
-    /**
-     * 
-     * @param lado1 Variable lado 1
-     * @param lado2 Variable lado 2
-     */
-    public Cuadrado(int lado1, int lado2) {
-        this.lado1 = lado1;
-        this.lado2 = lado2;
+    
+    
+    @Override
+    public void imprimir() {
+        super.imprimir(); //To change body of generated methods, choose Tools | Templates.
     }
-
-    /**
-     * Contructor de la clase cuadro
-     */
-    public Cuadrado() {
+    
+    @Override
+    public void hallarPerimetro(){
+        setPerimetro(getLado1() *4);
+       
     }
-
-    /**
-     * Get de Sacaner
-     * @return 
-     */
-    public Scanner getSc() {
-        return sc;
+    @Override
+    public void hallarArea(){
+     setArea(getLado1() *getLado1());
+        
+       
     }
-    /**
-     * Set scanner
-     * @param sc 
-     */
-    public void setSc(Scanner sc) {
-        this.sc = sc;
+    public void imprimirCuadrado(){
+        CuadroVista cb = new CuadroVista(getLado1(),getLado1());
+        cb.setVisible(true);
+        
+        
     }
-    /**
-     * get lado 1
-     * @return 
-     */
-    public int getLado1() {
-        return lado1;
-    }
-    /**
-     * set lado 1
-     * @param lado1 
-     */
-    public void setLado1(int lado1) {
-        this.lado1 = lado1;
-    }
-
-    public int getLado2() {
-        return lado2;
-    }
-
-    public void setLado2(int lado2) {
-        this.lado2 = lado2;
-    }
+    
+    
+    
+    
 
     
+   
+
+ 
     /**
      * Metodo donde se escribe los dos lados de cuadro
      */
+    /*
     public void digite(){
         System.out.println("Digite Lado 1");
         lado1 = sc.nextInt();
@@ -88,8 +68,13 @@ public class Cuadrado extends Figura {
         cb.setVisible(true);
 
     }
+    */
+    
+    
+        
+    }
     
        
     
     
-}
+
