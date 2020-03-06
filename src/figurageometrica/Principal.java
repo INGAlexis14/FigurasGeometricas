@@ -33,7 +33,11 @@ public class Principal {
      * Metodo donde inicia la aplicacion
      */
     public void Inicio() {
+     /**
+      * Menù Principal
+      */
         do {
+
             System.out.println("ELIJA EL TIPO DE FIGURA");
             System.out.println("1. CUADRADO");
             System.out.println("2. RECTANGULO");
@@ -61,7 +65,9 @@ public class Principal {
         } while (opcion != 5);
 
     }
-
+/**
+ * sub menu para ingresar  lador  triangulo
+ */
     public void digiteTriangulo() {
         System.out.println("Digite lado 1");
         l1 = sc.nextInt();
@@ -78,7 +84,9 @@ public class Principal {
         triangulo.imprimirTriangulo();
         triangulo.imprimirTipoFigura();
     }
-
+/**
+ * sub menu para ingresar  lador rectangulo
+ */
     public void digiteRectangulo() {
         System.out.println("Digite lado 1");
         l1 = sc.nextInt();
@@ -92,7 +100,9 @@ public class Principal {
         rectangulo.imprimir();
         rectangulo.imprimirRectangulo();
     }
-
+/**
+ * sub menu para ingresar  lador  cuadrado 
+ */
     public void digiteCuadrado() {
         System.out.println("Digite lado");
         cuadrado = new Cuadrado(sc.nextInt());
@@ -103,7 +113,9 @@ public class Principal {
         cuadrado.imprimir();
         cuadrado.imprimirCuadrado();
     }
-
+/**
+ * metodo  recorrer lista 
+ */
     public void listar() {
 
         for (int i = 0; i < figura.size(); i++) {
